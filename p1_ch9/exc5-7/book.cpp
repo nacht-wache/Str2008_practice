@@ -51,7 +51,7 @@ void Book::modifyAvailability()
     }
     else availability = 'y';
 
-    std::cout << "The availability of the book with the title " << getTitle() << " has been modified" << std::endl;
+    std::cout << "The availability of the book with the title " << getTitle() << " has been modified.\n";
 }
 
 void Book::readISBN()
@@ -84,11 +84,11 @@ void Book::readAuthor()
 
 void Book::readGenre()
 {
-    std::cout << "please, enter the book's genre digit" << std::endl
-              << "fiction - 1," << std::endl
-              << "nonfiction - 2," << std::endl
-              << "periodical - 3," << std::endl
-              << "biography - 4," <<std::endl
+    std::cout << "please, enter the book's genre digit\n"
+              << "fiction - 1,\n"
+              << "nonfiction - 2,\n"
+              << "periodical - 3,\n"
+              << "biography - 4,\n"
               << "children - 5.\n";
     int inputGenre;
     std::cin >> inputGenre;
@@ -125,8 +125,8 @@ void Book::readCopyrightDate()
 
 void Book::readAvailability()
 {
-    std::cout << "wether book is available or not?" << std::endl
-              << "y/n" << std::endl;
+    std::cout << "wether book is available or not?\n"
+              << "y/n\n";
     char readAvailabilty;
     std::cin >> readAvailabilty;
 
@@ -195,16 +195,16 @@ void Book::setAvailability(char setAvailability)
 
 std::ostream& operator<<(std::ostream& os, const Book& outputBook)
 {
-    return os << "ISBN is:" << std::endl
-              << outputBook.getISBN() << std::endl
-              << "Title of the book is:" << std::endl
-              << outputBook.getTitle() << std::endl
-              << "Author of the book is:" << std::endl
-              << outputBook.getAuthor() << std::endl
-              << "Genre of the book is:" << std::endl
-              << outputBook.getGenre() << std::endl
+    return os << "ISBN is:\n"
+              << outputBook.getISBN() << '\n'
+              << "Title of the book is:\n"
+              << outputBook.getTitle() << '\n'
+              << "Author of the book is:\n"
+              << outputBook.getAuthor() << '\n'
+              << "Genre of the book is:\n"
+              << outputBook.getGenre() << '\n'
               << "Copyright date of the book is:" << std:: endl
-              << outputBook.getCopyrightDate() <<std::endl
-              << "Availabilty of the book is: " << std::endl
-              << outputBook.getAvailability() <<std::endl;
+              << outputBook.getCopyrightDate() <<'\n'
+              << "Availabilty of the book is: \n"
+              << outputBook.getAvailability() <<'\n';
 }

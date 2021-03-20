@@ -74,16 +74,16 @@ int main()
 
         if(nachtwache.getISBN() == example.getISBN())
             std::cout << "Books " << nachtwache.getTitle() << " and "
-                      << example.getTitle() << " are equal" << std::endl;
+                      << example.getTitle() << " are equal\n";
         if(nachtwache.getISBN() != example.getISBN())
             std::cout << "Books " << nachtwache.getTitle() << " and "
-                      << example.getTitle() << " are unequal" << std::endl;
+                      << example.getTitle() << " are unequal\n";
 
     }  catch (std::out_of_range& e) {
-        std::cout << "Out of range error: " << e.what() << std::endl;
+        std::cout << "Out of range error: " << e.what() << '\n';;
 
     }
     catch (std::runtime_error& e) {
-        std::cout << "Runtime error: " << e.what() << std::endl;
+        std::cout << "Runtime error: " << e.what() << '\n';;
     }
 }
