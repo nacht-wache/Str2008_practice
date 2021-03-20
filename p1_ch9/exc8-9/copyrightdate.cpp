@@ -27,3 +27,15 @@ std::ostream& operator<<(std::ostream& os, const CopyrightDate& outputCopyrightD
               << outputCopyrightDate.getMonth() << '.'
               << outputCopyrightDate.getDay();
 }
+
+bool operator==(const CopyrightDate& firstCopyrightDate, const CopyrightDate& secondCopyrightDate)
+{
+    return firstCopyrightDate.getDay() == secondCopyrightDate.getDay() &&
+            firstCopyrightDate.getMonth() == secondCopyrightDate.getMonth() &&
+            firstCopyrightDate.getYear() == secondCopyrightDate.getYear();
+}
+
+bool operator!=(const CopyrightDate& firstCopyrightDate, const CopyrightDate& secondCopyrightDate)
+{
+    return !(firstCopyrightDate == secondCopyrightDate);
+}

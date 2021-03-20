@@ -19,7 +19,7 @@ void Patron::readUserName()
 
     //using set?
     userFirstName = inputUserFirstName;
-    userSecondName = userSecondName;
+    userSecondName = inputUserSecondName;
 };
 
 void Patron::readCardNumber()
@@ -40,6 +40,7 @@ void Patron::readFee()
     fee = inputFee;
 };
 
+
 std::ostream& operator<<(std::ostream& os, const Patron& outputPatron)
 {
     return os << "User's name is: " << '\n'
@@ -48,4 +49,16 @@ std::ostream& operator<<(std::ostream& os, const Patron& outputPatron)
               << outputPatron.getCardNumber() << '\n'
               << "User's fee is: " << '\n'
               << outputPatron.getFee() << '\n';
+}
+
+bool operator==(const Patron& firstPatron, const Patron& secondPatron)
+{
+    return (firstPatron.getCardNumber() == secondPatron.getCardNumber() ||
+            firstPatron.getUserName() == secondPatron.getUserName()) &&
+            firstPatron.getFee() == secondPatron.getFee();
+}
+
+bool operator!=(const Patron& firstPatron, const Patron& secondPatron)
+{
+    return !(firstPatron == secondPatron);
 }

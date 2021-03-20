@@ -22,4 +22,8 @@ private:
 
 std::ostream& operator<<(std::ostream& os, const Author& outputAuthor);
 
+bool operator==(const Author& firstAuthor, const Author& secondAuthor);
+
+bool operator!=(const Author& firstAuthor, const Author& secondAuthor);
+
 #endif // AUTHOR_H

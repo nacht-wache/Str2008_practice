@@ -208,3 +208,18 @@ std::ostream& operator<<(std::ostream& os, const Book& outputBook)
               << "Availabilty of the book is: \n"
               << outputBook.getAvailability() <<'\n';
 }
+
+bool operator==(const Book& firstBook, const Book& secondBook)
+{
+    return firstBook.getISBN() == secondBook.getISBN() &&
+            firstBook.getTitle() == secondBook.getTitle() &&
+            firstBook.getGenre() == secondBook.getGenre() &&
+            firstBook.getAuthor() == secondBook.getAuthor() &&
+            firstBook.getCopyrightDate() == secondBook.getCopyrightDate() &&
+            firstBook.getAvailability() == secondBook.getAvailability();
+}
+
+bool operator!=(const Book& firstBook, const Book& secondBook)
+{
+    return !(firstBook == secondBook);
+}

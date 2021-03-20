@@ -15,7 +15,6 @@ depending on whether or not the user owes a fee
 */
 
 
-
 #include <iostream>
 
 class Patron
@@ -38,7 +37,7 @@ public:
     int getCardNumber() const {return  cardNumber;};
     double getFee() const {return  fee;};
 
-    bool has_fee() {return fee;}; //false if 0, else true
+    bool hasFee() {return fee;}; //false if 0, else true
 private:
     std::string userFirstName;
     std::string userSecondName;
@@ -49,5 +48,9 @@ private:
 };
 
 std::ostream& operator<<(std::ostream& os, const Patron& outputPatron);
+
+bool operator==(const Patron& firstPatron, const Patron& secondPatron);
+
+bool operator!=(const Patron& firstPatron, const Patron& secondPatron);
 
 #endif // PATRON_H

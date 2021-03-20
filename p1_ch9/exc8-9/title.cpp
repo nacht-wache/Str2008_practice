@@ -14,3 +14,13 @@ std::ostream& operator<<(std::ostream& os, const Title& outputTitle)
 {
     return os << '"' << outputTitle.getTitle() << '"';
 }
+
+bool operator==(const Title& firstTitle, const Title& secondTitle)
+{
+    return firstTitle.getTitle() == secondTitle;
+}
+
+bool operator!=(const Title& firstTitle, const Title& secondTitle)
+{
+    return !(firstTitle == secondTitle);
+}

@@ -20,4 +20,8 @@ private:
 
 std::ostream& operator<<(std::ostream& os, const Title& outputTitle);
 
+bool operator==(const Title& firstTitle, const Title& secondTitle);
+
+bool operator!=(const Title& firstTitle, const Title& secondTitle);
+
 #endif // TITLE_H

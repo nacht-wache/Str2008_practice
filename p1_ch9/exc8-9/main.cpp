@@ -31,11 +31,13 @@ contains the names ofall Patrons who owe fees
 */
 
 #include <iostream>
-#include "book.h"
+#include "library.h"
 
 int main()
 {
     try {
+        Library library;
+        Patron yahor, verzila, Hegel;
         Book nachtwache, example;
         std::cout << "Die Nachtwache des Bonaventura.\n";
 
@@ -52,6 +54,22 @@ int main()
         example.setGenre(3);
         example.setCopyrightDate(1401,3,31);
         example.setAvailability('n');
+
+        yahor.setCardNumber(34);
+        yahor.setUserName("yahor", "amazing");
+        yahor.setFee(0);
+
+        verzila.setCardNumber(0);
+        verzila.setUserName("verzila", "BANKI");
+        verzila.setFee(34.54);
+
+        Hegel.setCardNumber(666);
+        Hegel.setUserName("Schelling", "One_love");
+        Hegel.setFee(999999);
+
+        library.checkOweFees();
+        for(int count {0}; count < )
+        std::cout << library.getOweFees();
 
         std::cout << nachtwache << example;
 

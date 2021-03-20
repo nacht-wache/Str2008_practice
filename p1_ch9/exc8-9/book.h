@@ -51,4 +51,8 @@ private:
 
 std::ostream& operator<<(std::ostream& os, const Book& outputBook);
 
+bool operator==(const Book& firstPatron, const Book& secondPatron);
+
+bool operator!=(const Book& firstPatron, const Book& secondPatron);
+
 #endif // BOOK_H

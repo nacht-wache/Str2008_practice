@@ -33,4 +33,8 @@ private:
 
 std::ostream& operator<<(std::ostream& os, const CopyrightDate& outputCopyrightDate);
 
+bool operator==(const CopyrightDate& firstCopyrightDate, const CopyrightDate& secondCopyrightDate);
+
+bool operator!=(const CopyrightDate& firstCopyrightDate, const CopyrightDate& secondCopyrightDate);
+
 #endif // COPYRIGHTDATE_H
