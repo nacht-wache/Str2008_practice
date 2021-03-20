@@ -57,7 +57,7 @@ std::ostream& operator << (std::ostream& os, const Date& name)
     return os << '(' << name.y
               << ',' << name.m
               << ',' << name.d
-              << ')' << std::endl;
+              << ')' << '\n';
 }
 
 int main()
@@ -69,10 +69,10 @@ int main()
         Date tomorrow = today;
         add_day(tomorrow, 1);
 
-        std::cout << "today is: " << today << std::endl
-                  << "tomorrow is: " << tomorrow << std::endl;
+        std::cout << "today is: " << today << '\n'
+                  << "tomorrow is: " << tomorrow << '\n';
     }  catch (std::out_of_range& e) {
-        std::cout << e.what() << std::endl;
+        std::cout << e.what() << '\n';
     }
 
 }

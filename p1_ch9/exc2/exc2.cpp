@@ -61,7 +61,7 @@ void Name_pairs::read_ages()
 
     for(int count {0}; count < names.size(); count++)
     {
-        std::cout << names[count] << std::endl;
+        std::cout << names[count] << '\n';
         double age {0.0};
         std::cin >> age;
 
@@ -72,11 +72,11 @@ void Name_pairs::read_ages()
 
 void Name_pairs::print()
 {
-    std::cout << std::endl;
+    std::cout << '\n';
 
     for(int count {0}; count < names.size(); count++)
     {
-        std::cout << "Name is: " << names[count] << " and age is: " << ages[count] << std::endl;
+        std::cout << "Name is: " << names[count] << " and age is: " << ages[count] << '\n';
     }
 }
 
@@ -114,6 +114,6 @@ int main()
         example.print();
 
     }  catch (std::exception& e) {
-        std::cout << e.what() << std::endl;
+        std::cout << e.what() << '\n';
     }
 }

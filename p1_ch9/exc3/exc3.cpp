@@ -52,7 +52,7 @@ void Name_pairs::read_ages()
 
     for(int count {0}; count < names.size(); count++)
     {
-        std::cout << names[count] << std::endl;
+        std::cout << names[count] << '\n';
         double age {0.0};
         std::cin >> age;
 
@@ -66,7 +66,7 @@ std::ostream& operator<<(std::ostream& os, const Name_pairs& object)
     for(int count {0}; count < object.getNames().size(); count++) {
         os << "Name is: " << object.getNames()[count]
                   << ' '
-                  << "Age is: " << object.getAges()[count] << std::endl;
+                  << "Age is: " << object.getAges()[count] << '\n';
 
     }
 
@@ -88,7 +88,7 @@ void Name_pairs::sortByName()
         }
     }
 
-    std::cout << std::endl << "sorted by names: Done!\n";
+    std::cout << "\nsorted by names: Done!\n";
 }
 
 bool operator==(const Name_pairs& fstObject, const Name_pairs& secObject)
@@ -136,14 +136,14 @@ int main()
         std::cout << second;
 
         if(first == second){
-            std::cout << "Objects are equal" << std::endl;
+            std::cout << "Objects are equal\n";
         }
 
         if(first != second){
-            std::cout << "Objects are different" << std::endl;
+            std::cout << "Objects are different\n";
         }
 
     }  catch (std::exception& e) {
-        std::cout << e.what() << std::endl;
+        std::cout << e.what() << '\n';
     }
 }
