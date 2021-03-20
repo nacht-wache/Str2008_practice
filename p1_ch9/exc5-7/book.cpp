@@ -5,8 +5,8 @@
 #include "copyrightdate.h"
 #include <iostream>
 
-Book::Book(ISBN inputToken, Title inputTitle, Author inputName, CopyrightDate inputCopyrightDate)
-    :token(inputToken), title(inputTitle), authorName(inputName), copyrightDate(inputCopyrightDate) {};
+Book::Book(ISBN inputToken, Title inputTitle, Author inputName, Genre inputGenre, CopyrightDate inputCopyrightDate)
+    :token(inputToken), title(inputTitle), authorName(inputName), genre(inputGenre), copyrightDate(inputCopyrightDate) {};
 
 std::string Book::getAvailability() const {
     switch (availability) {
@@ -18,6 +18,28 @@ std::string Book::getAvailability() const {
         break;
     default:
         throw std::out_of_range("unknown getAvailability error");
+    }
+}
+
+std::string Book::getGenre() const {
+    switch (genre) {
+    case 0:
+        return "fiction";
+        break;
+    case 1:
+        return "nonfiction";
+        break;
+    case 2:
+        return "periodical";
+        break;
+    case 3:
+        return "biography";
+        break;
+    case 4:
+        return "children";
+        break;
+    default:
+        throw std::out_of_range("genre");
     }
 }
 
@@ -60,6 +82,38 @@ void Book::readAuthor()
     authorName.readAuthor(inputFirstName, inputSecondName);
 }
 
+void Book::readGenre()
+{
+    std::cout << "please, enter the book's genre digit" << std::endl
+              << "fiction - 1," << std::endl
+              << "nonfiction - 2," << std::endl
+              << "periodical - 3," << std::endl
+              << "biography - 4," <<std::endl
+              << "children - 5.\n";
+    int inputGenre;
+    std::cin >> inputGenre;
+
+    switch (inputGenre) {
+    case 1:
+        genre = fiction;
+        break;
+    case 2:
+        genre = nonfiction;
+        break;
+    case 3:
+        genre = periodical;
+        break;
+    case 4:
+        genre = biography;
+        break;
+    case 5:
+        genre = children;
+        break;
+    default:
+        throw std::out_of_range("genre");
+    }
+}
+
 void Book::readCopyrightDate()
 {
     std::cout << "please, enter the year, month and day of copyright date of the book each followed by newline.\n";
@@ -97,6 +151,29 @@ void Book::setAuthor(std::string setFirstName, std::string setSecondName)
     authorName.readAuthor(setFirstName, setSecondName);
 }
 
+void Book::setGenre(int setGenre)
+{
+    switch (setGenre) {
+    case 1:
+        genre = fiction;
+        break;
+    case 2:
+        genre = nonfiction;
+        break;
+    case 3:
+        genre = periodical;
+        break;
+    case 4:
+        genre = biography;
+        break;
+    case 5:
+        genre = children;
+        break;
+    default:
+        throw std::out_of_range("genre");
+    }
+}
+
 void Book::setCopyrightDate(int setYear, int setMonth, int setDay)
 {
     copyrightDate.readDate(setYear, setMonth, setDay);
@@ -124,6 +201,8 @@ std::ostream& operator<<(std::ostream& os, const Book& outputBook)
               << outputBook.getTitle() << std::endl
               << "Author of the book is:" << std::endl
               << outputBook.getAuthor() << std::endl
+              << "Genre of the book is:" << std::endl
+              << outputBook.getGenre() << std::endl
               << "Copyright date of the book is:" << std:: endl
               << outputBook.getCopyrightDate() <<std::endl
               << "Availabilty of the book is: " << std::endl

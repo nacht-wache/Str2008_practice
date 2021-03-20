@@ -30,8 +30,24 @@ void ISBN::readISBNTokens(int inputFirstToken, int inputSecondToken, int inputTh
 
 std::ostream& operator<<(std::ostream& os, const ISBN& outputToken)
 {
-    return os << outputToken.getFirsToken() << '-'
+    return os << outputToken.getFirstToken() << '-'
               << outputToken.getSecondToken() << '-'
               << outputToken.getThirdToken() << '-'
               << outputToken.getFourthToken();
+}
+
+bool operator==(const ISBN& firstISBN, const ISBN& secondISBN)
+{
+    return (firstISBN.getFirstToken() == secondISBN.getFirstToken()
+            &&
+            firstISBN.getSecondToken() == secondISBN.getSecondToken()
+            &&
+            firstISBN.getThirdToken() == secondISBN.getThirdToken()
+            &&
+            firstISBN.getFourthToken() == secondISBN.getFourthToken());
+}
+
+bool operator!=(const ISBN& firstISBN, const ISBN& secondISBN)
+{
+    return !(firstISBN == secondISBN);
 }
