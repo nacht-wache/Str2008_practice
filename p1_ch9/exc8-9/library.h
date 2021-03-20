@@ -1,15 +1,6 @@
-/*
- *
- * change
-EXERCISE 8
+#ifndef LIBRARY_H
+#define LIBRARY_H
 
-1. Create a Patron class for the library.
-2. The class will have a user's name, library card number, and library fees (if owed).
-3. Have functions that access these methods, as well as a function to set the fee of the user.
-4. Have a helper method that returns a Boolean (bool)
-depending on whether or not the user owes a fee
-
-*/
 
 /*
 EXERCISE 9
@@ -29,3 +20,11 @@ have the library make sure that both the user and the book are in the library.
 12. Also create a method that will return a vector that
 contains the names ofall Patrons who owe fees
 */
+
+class Library
+{
+public:
+    Library();
+};
+
+#endif // LIBRARY_H
