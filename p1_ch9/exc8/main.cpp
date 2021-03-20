@@ -1,6 +1,6 @@
 /*
  *
- * HOLLO CHECK
+ * MDE
 EXERCISE 8
 
 1. Create a Patron class for the library.
