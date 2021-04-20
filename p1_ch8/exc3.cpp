@@ -1,65 +1,63 @@
 /*
 Create a vector of Fibonacci numbers and print them using the function
-from exercise 2. To create the vector, write a function, fibonacci(x,y,v,n),
+from exercise 2.
+ 1. To create the vector, write a function, fibonacci(x,y,v,n),
 where integers x and y are ints, v is an empty vector<int>, and n is the
-number of elements to put into v; v[O] will be x and v[1] will be y. A
-Fibonacci number is one that is part of a sequence where each element is
+number of elements to put into v;
+ 2. v[O] will be x and v[1] will be y.
+ A Fibonacci number is one that is part of a sequence where each element is
 the sum of the two previous ones. For example, starting with 1 and 2, we
 get 1, 2, 3, 6, 9, 15, 24, . . . . Your fibonacci() function should make such
 a series starting with its x and y arguments.
 */
 
-//mistake in the problem situation. 1, 2, 3, 6 (2+3=5) etc.
+//there is a mistake in the problem situation. 1, 2, 3, 6 (2+3=5) etc.
 
 #include <iostream>
 #include <vector>
 
-//const-by-reference when we don't want to parameters being changed by accident
-void fibonacci(int& x, int& y, std::vector<int>& v, const int& n)
-{
-    //push back first two numbers
-    v.push_back(x);
-    v.push_back(y);
+using std::cout;
+using std::vector;
+using std::string;
 
-    //we already have x and y in vector, so n-2
-    for(int count {0}; count < (n-2); ++count)
-    {
+//int is better than int&, vector& is better than vector
+//int allocates 4 bytes, vector allocates 24 bytes for each element, reference allocates 8 bytes
+void fibonacci(int x, int y, vector<int>& v, int n){
+    v[0] = {x};
+    v[1] = {y};
+
+    //count {2} - start with 3d element
+    for(int count {2}; count < (n); ++count) {
         int var {x+y};
-        v.push_back(var);
+        v[count] = {var};
         x = y;
         y = var;
     }
 }
 
-//const-by-reference. we don't want to change parameters.
-void print(const std::string& label, const std::vector<int>& v)
-{
+void print(const string& label, const vector<int>& v) {
+    cout << label << '\n';
 
-    std::cout << label << '\n';
-
-    for (int i {0}; i < v.size(); ++i)
-    {
-        std::cout << v[i] << '\n';
+    for (int count {0}; count < v.size(); ++count) {
+        cout << v[count] << '\n';
     }
 }
 
-int main()
-{
-    int fnum = 1;
-    int snum = 2;
-    int amount = 2;
+int main() {
+    int fNum {0};
+    int sNum {1};
+    int amount {2};
 
-    std::cout << "please, set amount of fibonacci's numbers to print  out.\n";
+    cout << "please, set amount of fibonacci's numbers to print out.\n";
     std::cin >> amount;
 
-    std::vector<int>vect;
+    vector<int> v(amount, 0);
 
-    std::string label = std::to_string(amount) + " fibonacci's numbers.";
+    string label = std::to_string(amount) + " fibonacci's numbers.";
 
+    fibonacci(fNum, sNum, v, amount);
 
-    fibonacci(fnum, snum, vect, amount);
-
-    print(label, vect);
+    print(label, v);
 
     return 0;
 }
