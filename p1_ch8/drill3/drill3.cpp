@@ -15,7 +15,7 @@ int var {0};
 
 void print()
 {
-    std::cout << var << std::endl;
+    std::cout << var << '\n';
 }
 }
 
@@ -25,7 +25,7 @@ int var {0};
 
 void print()
 {
-    std::cout << var << std::endl;
+    std::cout << var << '\n';
 }
 }
 
@@ -35,7 +35,7 @@ int var {0};
 
 void print()
 {
-    std::cout << var << std::endl;
+    std::cout << var << '\n';
 }
 }
 

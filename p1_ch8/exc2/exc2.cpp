@@ -12,18 +12,18 @@ slightly modified version. allows a user to set amount of numbers in vector on h
 void print(const std::string& label, const std::vector<int>& v)
 {
 
-    std::cout << label << std::endl;
+    std::cout << label << '\n';
 
     for (int i = 0; i < v.size(); ++i)
     {
-        std::cout << v[i] << std::endl;
+        std::cout << v[i] << '\n';
     }
 }
 
 int main()
 {
 
-    std::cout << "please, set amount of numbres" << std::endl;
+    std::cout << "please, set amount of numbres" << '\n';
 
     //variable to hold and write amount
     int users_input = 0;

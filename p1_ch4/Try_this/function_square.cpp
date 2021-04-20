@@ -29,7 +29,7 @@ int main() {
 
 unsigned square(unsigned x)
 {
-	std::cout << x << std::endl;
+	std::cout << x << '\n';
 	unsigned s = 0;
 
 	for (unsigned add = x; x != 0; add += add, x >>= 1) {
@@ -44,5 +44,5 @@ int main()
 {
 	int x;
 	std::cin >> x;
-	std::cout << square(x) << std::endl;
+	std::cout << square(x) << '\n';
 }

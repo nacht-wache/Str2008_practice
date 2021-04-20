@@ -6,5 +6,12 @@
 *.dll
 *.exe
 
+#Qt
+
+*.user
+*qmake.stash
+
 #CLion
-**.idea
+.idea
+*.txt
+**cmake-build-debug*
