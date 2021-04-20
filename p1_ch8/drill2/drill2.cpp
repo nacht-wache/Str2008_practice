@@ -4,14 +4,14 @@ void swap_v(int a, int b)
 {
   int temp; temp = a; a = b; b = temp;
 
-  std::cout << "1st parameter: " << a << " and 2d parameter:" << b << std::endl;
+  std::cout << "1st parameter: " << a << " and 2d parameter:" << b << '\n';
 }
 
 void swap_r(int& a, int& b)
 {
   int temp; temp = a; a = b; b = temp;
 
-std::cout << "1st parameter: " << a << " and 2d parameter:" << b << std::endl;
+std::cout << "1st parameter: " << a << " and 2d parameter:" << b << '\n';
 }
 
 // doesn't compile. error assigning const type reference
@@ -24,7 +24,7 @@ std::cout << "1st parameter: " << a << " and 2d parameter:" << b << std::endl;
 void swap_cr(const int& a, const int& b)
 {
     int temp = a + b;
-    std::cout << "temp is " << temp << std::endl;
+    std::cout << "temp is " << temp << '\n';
 }
 
 int main()
@@ -33,19 +33,19 @@ int main()
     int x = 7;
     int y = 9;
 
-    std::cout << "x: " << x << " and y: " << y << std::endl; // x:7 and y: 9
+    std::cout << "x: " << x << " and y: " << y << '\n'; // x:7 and y: 9
     //swap local variables
     swap_v(x,y);                                             // 1st:9 and 2d: 7
 
-    std::cout << "x: " << x << " and y: " << y << std::endl; // x:7 and y: 9
+    std::cout << "x: " << x << " and y: " << y << '\n'; // x:7 and y: 9
     //swap global variables
     swap_r(x,y);                                             // 1st:9 and 2d: 7
 
-    std::cout << "x: " << x << " and y: " << y << std::endl; // x:9 and y: 7
+    std::cout << "x: " << x << " and y: " << y << '\n'; // x:9 and y: 7
     //OK
     swap_cr(x,y);                                            // temp is 16
 
-    std::cout << "x: " << x << " and y: " << y << std::endl;  // x:9 and y: 7
+    std::cout << "x: " << x << " and y: " << y << '\n';  // x:9 and y: 7
     //swap local variables
     swap_v(7,9);                                             // 1st:9 and 2d: 7
 
@@ -57,7 +57,7 @@ int main()
 
     //OK.swapping local variables
     swap_v(cx,cy);                                               // 1st:9 and 2d: 7
-    std::cout << "cx: " << cx << " and cy: " << cy << std::endl; // cx:7 and cy: 9
+    std::cout << "cx: " << cx << " and cy: " << cy << '\n'; // cx:7 and cy: 9
 
     //doesn't compile. would lose const qualifier
     swap_r(cx,cy);
@@ -79,7 +79,7 @@ int main()
 
 
     swap_v(dx,dy);                                               //1st:9 and 2d:7
-    std::cout << "dx: " << dx << " and dy: " << dy << std::endl; //dx: 7.7 and dy: 9.9
+    std::cout << "dx: " << dx << " and dy: " << dy << '\n'; //dx: 7.7 and dy: 9.9
 
     //doesn't compile. there's no implicit conversion from double to int&
     swap_r(dx,dy);

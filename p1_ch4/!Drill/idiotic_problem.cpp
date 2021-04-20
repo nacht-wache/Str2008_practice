@@ -36,7 +36,7 @@ int main()
 		{
 			std::cin >> val1;
 			std::cin >> val2;
-			std::cout << val1 << " " << val2 << std::endl;
+			std::cout << val1 << " " << val2 << '\n';
 		}
 
 		return 0;

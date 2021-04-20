@@ -26,7 +26,7 @@ int main()
 {
     std::vector<int>Numbers {-100,-40,-10000,100,10000,100000000};
 
-    std::cout << maxv(Numbers) << std::endl;
+    std::cout << maxv(Numbers) << '\n';
 
     return 0;
 }

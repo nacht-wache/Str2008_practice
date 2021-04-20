@@ -104,22 +104,22 @@ int main()
 
     CalculateReferences(Numbers, LargestNumber, SmallestNumber, Median, Mean);
 
-    std::cout << "Output CalculateReferences results: " << std::endl
-              << "the largest number is: " << LargestNumber << std::endl
-              << "the smallest is: " << SmallestNumber << std::endl
-              << "median is: " << Median << std::endl
-              << "mean is: " << Mean << std::endl;
+    std::cout << "Output CalculateReferences results: " << '\n'
+              << "the largest number is: " << LargestNumber << '\n'
+              << "the smallest is: " << SmallestNumber << '\n'
+              << "median is: " << Median << '\n'
+              << "mean is: " << Mean << '\n';
 
     Results result;
     result = {Numbers[0],Numbers[0],0,0};
 
     CalculateStruct(Numbers, result);
 
-    std::cout << "Output CalculateStruct results: " << std::endl
-              << "the largest number is: " << result.LargestNumber << std::endl
-              << "the smallest is: " << result.SmallestNumber << std::endl
-              << "median is: " << result.Median << std::endl
-              << "mean is: " << result.Mean << std::endl;
+    std::cout << "Output CalculateStruct results: " << '\n'
+              << "the largest number is: " << result.LargestNumber << '\n'
+              << "the smallest is: " << result.SmallestNumber << '\n'
+              << "median is: " << result.Median << '\n'
+              << "mean is: " << result.Mean << '\n';
 
 
     return 0;

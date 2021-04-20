@@ -20,7 +20,7 @@ void ReversedVector(std::vector<std::string>& OriginalVector)
 
     std::cout << "reversed vector.\n";
     for(int count {0}; count < ReversedVector.size(); ++count){
-        std::cout << ReversedVector[count] << std::endl;
+        std::cout << ReversedVector[count] << '\n';
     }
 }
 
@@ -37,7 +37,7 @@ void SwapReversedVector(std::vector<std::string>& OriginalVector)
 
     std::cout << "swap() reversed vector.\n";
     for(int count {0}; count < OriginalVector.size(); ++count){
-        std::cout << OriginalVector[count] << std::endl;
+        std::cout << OriginalVector[count] << '\n';
     }
 }
 
@@ -46,7 +46,7 @@ int main()
 {
     std::cout << "orig vector.\n";
     for(int count {0}; count < OriginalVector.size(); ++count){
-        std::cout << OriginalVector[count] << std::endl;
+        std::cout << OriginalVector[count] << '\n';
     }
 
     ReversedVector(OriginalVector);

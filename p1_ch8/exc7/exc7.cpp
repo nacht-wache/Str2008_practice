@@ -45,7 +45,7 @@ void CreateAgeVector()
 
     for(int count = 0; count < Names.size(); count++)
     {
-        std::cout << Names[count] << std::endl;
+        std::cout << Names[count] << '\n';
         std::cin >> InputAge;
         Age.push_back(InputAge);
     }
@@ -53,11 +53,11 @@ void CreateAgeVector()
 
 void OutputNameAgePair()
 {
-    std::cout << std::endl << "Current name-age pairs are:\n";
+    std::cout << '\n' << "Current name-age pairs are:\n";
 
     for(int count = 0; count < Names.size(); count++)
     {
-        std::cout << Names[count] << ' ' << Age[count] << std::endl;
+        std::cout << Names[count] << ' ' << Age[count] << '\n';
     }
 }
 
