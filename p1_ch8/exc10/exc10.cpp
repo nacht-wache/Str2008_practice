@@ -31,6 +31,6 @@ int main()
     std::vector<double>Price {100.13,125.2,200.5,10.6,40.3,15.12};
     std::vector<double>Weight {2.5,5.3,7.8,3.1,9.5,12};
 
-    std::cout << Function(Price, Weight) << std::endl;
+    std::cout << Function(Price, Weight) << '\n';
     return 0;
 }

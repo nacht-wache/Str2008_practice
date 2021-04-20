@@ -35,11 +35,11 @@ void fibonacci(int& x, int& y, std::vector<int>& v, const int& n)
 void print(const std::string& label, const std::vector<int>& v)
 {
 
-    std::cout << label << std::endl;
+    std::cout << label << '\n';
 
     for (int i {0}; i < v.size(); ++i)
     {
-        std::cout << v[i] << std::endl;
+        std::cout << v[i] << '\n';
     }
 }
 

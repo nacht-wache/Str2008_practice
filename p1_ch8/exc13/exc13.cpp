@@ -14,7 +14,7 @@ void print_until_s(const std::vector<std::string>& v, const std::string& quit)
     for(int count = 0; count < v.size(); count++) //              vector<string> max_size = 576 460 752 303 423 487;
     {                                                            //unsigned long long range is [0; 18 446 744 073 709 551 615]
         if(v[count] == quit) return;
-        std::cout << v[count] << std::endl;
+        std::cout << v[count] << '\n';
     }
 }
 
@@ -29,7 +29,7 @@ void print_until_ss(const std::vector<std::string>& v, const std::string& quit)
         if(v[count] == quit) ++quitCount;
         if(quitCount == 2) return;
 
-        std::cout << v[count] << std::endl;
+        std::cout << v[count] << '\n';
     }
 }
 

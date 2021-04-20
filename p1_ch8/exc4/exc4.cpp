@@ -25,7 +25,7 @@ int main()
     int fnum = 1;
     int snum = 2;
 
-    std::cout << fibonacci(fnum, snum) << std::endl;
+    std::cout << fibonacci(fnum, snum) << '\n';
 
     return 0;
 }

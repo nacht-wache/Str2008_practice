@@ -112,15 +112,15 @@ int main()
 
         for(int count {0}; count < numofchar(stringvector).size(); count++)
         {
-            std::cout << "num of characters of " << count << " element is: " << numofchar(stringvector)[count] << std::endl;
+            std::cout << "num of characters of " << count << " element is: " << numofchar(stringvector)[count] << '\n';
         }
 
-        std::cout << "the longest is: " << stringvector[longest(stringvector)] << std::endl
-                  << "the shortest is: " << stringvector[shortest(stringvector)] << std::endl
-                  << "lexographically the first is: " << stringvector[first(stringvector)] << std::endl
-                  << "lexographically the last is: " << stringvector[last(stringvector)] << std::endl;
+        std::cout << "the longest is: " << stringvector[longest(stringvector)] << '\n'
+                  << "the shortest is: " << stringvector[shortest(stringvector)] << '\n'
+                  << "lexographically the first is: " << stringvector[first(stringvector)] << '\n'
+                  << "lexographically the last is: " << stringvector[last(stringvector)] << '\n';
     }  catch (std::runtime_error& e) {
-        std::cout << e.what() << std::endl;
+        std::cout << e.what() << '\n';
     }
 }
 

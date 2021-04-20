@@ -98,7 +98,7 @@ void Name_pairs::sortByName()
         }
     }
 
-    std::cout << std::endl << "sorted by names: Done!\n";
+    std::cout << '\n' << "sorted by names: Done!\n";
 }
 
 int main()
