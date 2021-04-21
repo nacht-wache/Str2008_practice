@@ -14,11 +14,11 @@ Why?
 
 std::vector<int> numofchar(const std::vector<std::string>& stringvector)
 {
-    if(stringvector.size() == 0) throw std::runtime_error("empty vector");
-    if(stringvector.size() == 1) throw std::runtime_error("vector of one element");
+    if (stringvector.size() == 0) {throw std::runtime_error("empty vector");}
+    if (stringvector.size() == 1) {throw std::runtime_error("vector of one element");}
 
     std::vector<int> numofchar(stringvector.size());
-    for(int count {0}; count < stringvector.size(); count++)
+    for (int count {0}; count < stringvector.size(); count++)
     {
         numofchar[count] = stringvector[count].length();
     }
@@ -27,16 +27,16 @@ std::vector<int> numofchar(const std::vector<std::string>& stringvector)
 
 int longest (const std::vector<std::string>& stringvector)
 {
-    if(stringvector.size() == 0) throw std::runtime_error("empty vector");
-    if(stringvector.size() == 1) throw std::runtime_error("vector of one element");
+    if (stringvector.size() == 0) {throw std::runtime_error("empty vector");}
+    if (stringvector.size() == 1) {throw std::runtime_error("vector of one element");}
 
     std::string longest {stringvector[0]};
 
     int indexlongest {0};
 
-    for(int count {0}; count < stringvector.size(); count++)
+    for (int count {0}; count < stringvector.size(); count++)
     {
-        if(longest.length() < stringvector[count].length())
+        if (longest.length() < stringvector[count].length())
         {
             longest = stringvector[count];
             indexlongest = count;
@@ -47,16 +47,16 @@ int longest (const std::vector<std::string>& stringvector)
 
 int shortest (const std::vector<std::string>& stringvector)
 {
-    if(stringvector.size() == 0) throw std::runtime_error("empty vector");
-    if(stringvector.size() == 1) throw std::runtime_error("vector of one element");
+    if (stringvector.size() == 0) {throw std::runtime_error("empty vector");}
+    if (stringvector.size() == 1) {throw std::runtime_error("vector of one element");}
 
     std::string smallest {stringvector[0]};
 
     int indexsmallest {0};
 
-    for(int count {0}; count < stringvector.size(); count++)
+    for (int count {0}; count < stringvector.size(); count++)
     {
-        if(smallest.length() > stringvector[count].length())
+        if (smallest.length() > stringvector[count].length())
         {
             smallest = stringvector[count];
             indexsmallest = count;
@@ -68,15 +68,15 @@ int shortest (const std::vector<std::string>& stringvector)
 
 int first (const std::vector<std::string>& stringvector)
 {
-    if(stringvector.size() == 0) throw std::runtime_error("empty vector");
-    if(stringvector.size() == 1) throw std::runtime_error("vector of one element");
+    if (stringvector.size() == 0) {throw std::runtime_error("empty vector");}
+    if (stringvector.size() == 1) {throw std::runtime_error("vector of one element");}
 
     std::string First = stringvector[0];
     int indexfirst {0};
 
-    for(int count {0}; count < stringvector.size(); count++)
+    for (int count {0}; count < stringvector.size(); count++)
     {
-        if(stringvector[count] < First)
+        if (stringvector[count] < First)
         {
             First = stringvector[count];
             indexfirst = count;
@@ -87,15 +87,15 @@ int first (const std::vector<std::string>& stringvector)
 
 int last (const std::vector<std::string>& stringvector)
 {
-    if(stringvector.size() == 0) throw std::runtime_error("empty vector");
-    if(stringvector.size() == 1) throw std::runtime_error("vector of one element");
+    if (stringvector.size() == 0) {throw std::runtime_error("empty vector");}
+    if (stringvector.size() == 1) {throw std::runtime_error("vector of one element");}
 
     std::string last = stringvector[0];
     int indexlast {0};
 
-    for(int count {0}; count < stringvector.size(); count++)
+    for (int count {0}; count < stringvector.size(); count++)
     {
-        if(stringvector[count] > last)
+        if (stringvector[count] > last)
         {
             last = stringvector[count];
             indexlast = count;
@@ -107,20 +107,22 @@ int last (const std::vector<std::string>& stringvector)
 
 int main()
 {
-    try {
+    try
+    {
         std::vector<std::string> stringvector{"yahor", "is", "my", "best", "friend"};
 
-        for(int count {0}; count < numofchar(stringvector).size(); count++)
+        for (int count {0}; count < numofchar(stringvector).size(); count++)
         {
-            std::cout << "num of characters of " << count << " element is: " << numofchar(stringvector)[count] << '\n';
+            std::cout << "num of characters of " << count
+                      << " element is: " << numofchar(stringvector)[count] << '\n';
         }
 
         std::cout << "the longest is: " << stringvector[longest(stringvector)] << '\n'
                   << "the shortest is: " << stringvector[shortest(stringvector)] << '\n'
                   << "lexographically the first is: " << stringvector[first(stringvector)] << '\n'
                   << "lexographically the last is: " << stringvector[last(stringvector)] << '\n';
-    }  catch (std::runtime_error& e) {
+    }  catch (std::runtime_error& e)
+    {
         std::cout << e.what() << '\n';
     }
 }
-

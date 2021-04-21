@@ -10,11 +10,6 @@ to see what works
 #include <vector>
 #include <iostream>
 
-//non-reference, cause 1) you can't refere to an empty object (e.g. declared and uninitialized std::vector<int>Something)
-//AND
-//const, cause 1) you want to perform an operation onto the exactly same object (specifically if it's empty)
-//FALSE
-
 int main()
 {
 

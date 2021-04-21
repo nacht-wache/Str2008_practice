@@ -7,48 +7,55 @@ Write versions of the functions from exercise 5, but with a vector<String>.
 #include <iostream>
 #include <string>
 
-std::vector<std::string>OriginalVector {"zero", "one", "two", "three", "four", "five"};
+using std::cout;
+using std::string;
+using std::vector;
 
-void ReversedVector(std::vector<std::string>& OriginalVector)
+vector<string>originalVector {"zero", "one", "two", "three", "four", "five"};
+
+void ReversedVector(vector<string>& OriginalVector)
 {
-    std::vector<std::string>ReversedVector;
+    vector<string>ReversedVector;
 
-    for(int count = (OriginalVector.size()-1); count >= 0; --count)
+    for (int count = (OriginalVector.size()-1); count >= 0; --count)
     {
         ReversedVector.push_back(OriginalVector[count]);
     }
 
-    std::cout << "reversed vector.\n";
-    for(int count {0}; count < ReversedVector.size(); ++count){
-        std::cout << ReversedVector[count] << '\n';
+    cout << "reversed vector.\n";
+    for (int count {0}; count < ReversedVector.size(); ++count)
+    {
+        cout << ReversedVector[count] << '\n';
     }
 }
 
-void SwapReversedVector(std::vector<std::string>& OriginalVector)
+void SwapReversedVector(vector<string>& OriginalVector)
 {
 
-    for(int count {0}; count < (OriginalVector.size()-1); ++count)
+    for (int count {0}; count < (OriginalVector.size()-1); ++count)
     {
-        std::string FirstNumber {OriginalVector[count]};
-        std::string SecondNumber {OriginalVector[count+1]};
+        string FirstNumber {OriginalVector[count]};
+        string SecondNumber {OriginalVector[count+1]};
 
         std::swap(FirstNumber, SecondNumber);
     }
 
-    std::cout << "swap() reversed vector.\n";
-    for(int count {0}; count < OriginalVector.size(); ++count){
-        std::cout << OriginalVector[count] << '\n';
+    cout << "swap() reversed vector.\n";
+    for (int count {0}; count < OriginalVector.size(); ++count)
+    {
+        cout << OriginalVector[count] << '\n';
     }
 }
 
 
 int main()
 {
-    std::cout << "orig vector.\n";
-    for(int count {0}; count < OriginalVector.size(); ++count){
-        std::cout << OriginalVector[count] << '\n';
+    cout << "orig vector.\n";
+    for (int count {0}; count < originalVector.size(); ++count)
+    {
+        cout << originalVector[count] << '\n';
     }
 
-    ReversedVector(OriginalVector);
-    SwapReversedVector(OriginalVector);
+    ReversedVector(originalVector);
+    SwapReversedVector(originalVector);
 }

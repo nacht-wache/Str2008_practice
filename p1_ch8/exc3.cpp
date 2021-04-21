@@ -22,12 +22,14 @@ using std::string;
 
 //int is better than int&, vector& is better than vector
 //int allocates 4 bytes, vector allocates 24 bytes for each element, reference allocates 8 bytes
-void fibonacci(int x, int y, vector<int>& v, int n){
+void fibonacci(int x, int y, vector<int>& v, int n)
+{
     v[0] = {x};
     v[1] = {y};
 
     //count {2} - start with 3d element
-    for(int count {2}; count < (n); ++count) {
+    for (int count {2}; count < (n); ++count)
+    {
         int var {x+y};
         v[count] = {var};
         x = y;
@@ -35,15 +37,18 @@ void fibonacci(int x, int y, vector<int>& v, int n){
     }
 }
 
-void print(const string& label, const vector<int>& v) {
+void print(const string& label, const vector<int>& v)
+{
     cout << label << '\n';
 
-    for (int count {0}; count < v.size(); ++count) {
+    for (int count {0}; count < v.size(); ++count)
+    {
         cout << v[count] << '\n';
     }
 }
 
-int main() {
+int main()
+{
     int fNum {0};
     int sNum {1};
     int amount {2};
