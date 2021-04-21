@@ -13,15 +13,18 @@ using std::vector;
 using std::string;
 
 //const reference can be initialized with rvalue
-void print(const string& label, const vector<int>& vector) {
+void print(const string& label, const vector<int>& vector)
+{
     cout << label << '\n';
 
-    for (int count : vector) {
+    for (int count : vector)
+    {
         cout << count << '\n';
     }
 }
 
-int main() {
+int main()
+{
     cout << "please, set amount of numbers (integer type)" << '\n';
 
     //variable to hold and write amount
@@ -29,7 +32,8 @@ int main() {
     std::cin >> users_input;
 
     std::vector<int>numbers;
-    for(int count = 0; count < (users_input+1); ++count) {
+    for (int count = 0; count < (users_input+1); ++count)
+    {
         numbers.push_back(count);
     }
 

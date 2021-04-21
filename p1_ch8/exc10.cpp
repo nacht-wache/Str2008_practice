@@ -18,7 +18,7 @@ double Function(const std::vector<double>& Price, const std::vector<double>& Wei
 {
     double SUM {0};
 
-    for(unsigned int count {0}; count < Price.size(); count++)
+    for (unsigned int count {0}; count < Price.size(); count++)
     {
         SUM += Price[count] * Weight[count];
     }
@@ -28,8 +28,8 @@ double Function(const std::vector<double>& Price, const std::vector<double>& Wei
 
 int main()
 {
-    std::vector<double>Price {100.13,125.2,200.5,10.6,40.3,15.12};
-    std::vector<double>Weight {2.5,5.3,7.8,3.1,9.5,12};
+    std::vector<double>Price {100.13, 125.2, 200.5, 10.6, 40.3, 15.12};
+    std::vector<double>Weight {2.5, 5.3, 7.8, 3.1, 9.5, 12};
 
     std::cout << Function(Price, Weight) << '\n';
     return 0;
